@@ -13,6 +13,7 @@
         body {
             padding-top: 20px;
             padding-bottom: 40px;
+            background-image: url('{{STATIC_URL}}img/body_bg.png');
         }
 
             /* Custom container */
@@ -58,13 +59,13 @@
         .source{
             margin-bottom : 10px;
         }
-    </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
+        .source a {
+            font-family : "Bitstream Vera Sans Mono";
+            font-weight : bold;
+            color: #dd1144;
+        }
+    </style>
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -81,7 +82,7 @@
             {% block nav %} {% endblock %}
 
         </ul>
-        <h3 class="muted">실시간 그림판</h3>
+        <h3 >RealTime Canvas</h3>
     </div>
     {% block content %} {% endblock %}
 </div>

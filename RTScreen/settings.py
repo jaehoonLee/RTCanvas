@@ -83,11 +83,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 TEMPLATE_DIRS = (
-    'C:\Users\user\PycharmProjects\RTScreen\Main\myTemplates',
+    'C:\Users\user\PycharmProjects\RTCanvas\Main\myTemplates',
 )
 
 STATICFILES_DIRS =  (
-    "C:\Users\user\PycharmProjects\RTScreen\Main\myTemplates",
+    "C:\Users\user\PycharmProjects\RTCanvas\Main\myTemplates",
 )
 
 STATIC_URL = '/static/'
