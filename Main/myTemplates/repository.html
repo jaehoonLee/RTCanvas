@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %} Realtime Screen {% endblock %}
+{% block nav %}
+<li><a href="/">Home</a></li>
+<li><a href="/about">Contributer</a></li>
+<li class="active"><a href="/repository">github</a></li>
+{% endblock %}
+{% block content %}
+    <hr>
+    <h3>서버 소스</h3>
+    <ul>
+        <li class="source">
+            <a  href="">웹사이트 소스</a></br>
+            <ul>
+            <li>
+                Python & Django
+            </li>
+            </ul>
+        </li>
+        <li>
+            <a  href="">Campus & Chat 소스</a>
+            <ul>
+            <li>
+                Node.js & WebSocket
+            </li>
+            </ul>
+        </li>
+    </ul>
+    </br>
+    <h3>클라이언트 소스</h3>
+    <ul>
+        <li class="source">
+            <a href="">안드로이드 소스</a>
+            <ul>
+            <li>
+                WebSocket
+            </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">아이폰 소스</a>
+        </li>
+    </ul>
+
+    <hr>
+{% endblock %}

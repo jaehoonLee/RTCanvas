@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %} Realtime Screen {% endblock %}
+{% block nav %}
+<li><a href="/">Home</a></li>
+<li class="active"><a href="/about">Contributer</a></li>
+<li><a href="/repository">github</a></li>
+{% endblock %}
+{% block content %}
+    <div class="row-fluid">
+    <hr>
+        <h3>3주차 Contributer</h3>
+        <div class="row-fluid">
+        <div>
+            <div class="span6">
+            <div style="height:130px;">
+            <h4>이재훈</h4>
+            <img style="float:left; margin-right: 10px;" class="profile" src="{{ STATIC_URL }}img/JH.png">
+            <p>
+                - Node.js Server Programming</br>
+                - Web Screen Campus</br>
+            </p>
+            </div>
+
+
+            <h4>김재은</h4>
+            <img style="float:left; margin-right: 10px;" class="profile" src="{{ STATIC_URL }}img/JE.png">
+            <p>
+                - Android WebSocket</br>
+                - Android Campus</br>
+            </p>
+            </div>
+
+            <div class="span6">
+            <h4>김동민</h4>
+            <img style="float:left; margin-right: 10px;" class="profile" src="{{ STATIC_URL }}img/DM.png">
+            <p>
+                - Android WebSocket</br>
+                - Android Campus</br>
+            </p>
+            </div>
+
+            </div>
+        </div>
+    <hr>
+        <h3>5주차 Contributer</h3>
+        <div class="row-fluid">
+            <div class="span6">
+                <h4>이재훈</h4>
+                <img style="float:left; margin-right: 10px;" class="profile" src="{{ STATIC_URL }}img/JH.png">
+                <p>
+                    - Node.js Server Programming</br>
+                    - Web Screen Campus</br>
+                </p>
+            </div>
+            <div class="span6">
+                 <h4>지상우</h4>
+                 <img style="float:left; margin-right: 10px;" class="profile" src="{{ STATIC_URL }}img/SW.png">
+                 <p>
+                    - Android WebSocket</br>
+                    - Android Campus</br>
+                 </p>
+            </div>
+        </div>
+    <hr>
+        <h3>6주차 Contributer</h3>
+            <h4>Come and join RealTime Campus. who want to do awesome works.</h4>
+    <hr>
+    <h3> Supporters </h3>
+        <h4>Special Thanks to <span style="color:#46a546">BonAngels</span> &<span style="color:#46a546"> MK Kim</span></h4>
+        <h4>Thank for all <span style="color:#0081c2">Mad Camp 6th Members</span></h4>
+    <hr>
+    </div>
+    <div class="footer">
+        <p>&copy; MADCamp 2013</p>
+    </div>
+{% endblock %}

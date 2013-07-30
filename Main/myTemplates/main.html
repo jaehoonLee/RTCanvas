@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %} Realtime Screen {% endblock %}
+{% block nav %}
+<li class="active"><a href="/">Home</a></li>
+<li><a href="/about">Contributer</a></li>
+<li><a href="/repository">github</a></li>
+{% endblock %}
+{% block content %}
+    <hr>
+    <div class="jumbotron">
+        <h1>Super awesome RealTime Canvas</h1>
+
+        <p class="lead">실시간으로 친구들과 그림을 그리면서 즐기세요!</p>
+        <a class="btn btn-large btn-success" href="#">Enter Room</a>
+    </div>
+
+    <hr>
+
+    <div class="row-fluid marketing">
+        <div class="span6">
+            <h4>N-Screen</h4>
+
+            <p>
+                Web : Chrome, Opera, Firefox</br>
+                Mobile : Iphone, Android
+            </p>
+
+            <h4>WebChat</h4>
+
+            <p>
+                You can chat with your friends in realtime. </br>
+                Only Web Support Web Chat.
+            </p>
+
+        </div>
+
+        <div class="span6">
+            <h4>Canvas</h4>
+
+            <p>
+                We support realtime canvas. So, you can enjoy to draw anything with your friends.
+            </p>
+
+
+            <h4>VideoChat</h4>
+
+            <p>
+                We support videoChat with webRTC technology.</br>
+                Only Web Support Web Chat.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <p>&copy; MADCamp 2013</p>
+    </div>
+
+{% endblock %}
