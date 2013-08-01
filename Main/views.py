@@ -12,44 +12,56 @@ def init():
     participant_thread = threading.Thread(target=update_participant)
     participant_thread.start()
 
+
 def update_participant():
-    while True :
-        rooms = CanvasRoom.objects.all()
-        for room in rooms :
-            print room.id
-            CanvasRoom.objects.delete_participant(id=room.id)
-        time.sleep(2)
+    print threading.enumerate()
+
+    rooms = CanvasRoom.objects.all()
+    for room in rooms:
+        CanvasRoom.objects.delete_participant(id=room.id)
+    time.sleep(2)
+    participant_thread = threading.Thread(target=update_participant)
+    participant_thread.start()
 
 # Create your views here.
 def main(request):
     return render_to_response('main.html', RequestContext(request))
 
+
 def about(request):
     return render_to_response('about.html', RequestContext(request))
+
 
 def repository(request):
     return render_to_response('repository.html', RequestContext(request))
 
+
 def canvasroom(request):
     rooms = CanvasRoom.objects.all()
 
-    return render_to_response('canvasroom.html', RequestContext(request, {'rooms' : rooms}))
+    return render_to_response('canvasroom.html', RequestContext(request, {'rooms': rooms}))
+
 
 def canvas(request):
-    return render_to_response('canvas.html', RequestContext(request, {'title':'재훈의 그림방'}))
+    return render_to_response('canvas.html', RequestContext(request, {'title': '재훈의 그림방'}))
+
 
 def canvas_enter(request, room, partiID):
-    return render_to_response('canvas.html', RequestContext(request, {'title':room.name, 'participants':room.participant_set.all(), 'partiID' : partiID}))
+    return render_to_response('canvas.html', RequestContext(request, {'title': room.name,
+                                                                      'participants': room.participant_set.all(),
+                                                                      'partiID': partiID}))
 
 #model
 def register_room(request):
-    room = CanvasRoom.objects.create_room(request.POST['name'],  request.POST['password'])
+    room = CanvasRoom.objects.create_room(request.POST['name'], request.POST['password'])
     return canvas_enter(request, room, 1)
+
 
 def register_participant(request):
     room = CanvasRoom.objects.get(id=int(request.POST['id']))
     participant = Participant.objects.create_participant(request.POST['name'], room)
     return canvas_enter(request, room, participant.id)
+
 
 def get_participant(request):
     #Update Participant
@@ -60,7 +72,7 @@ def get_participant(request):
     participants = room.participant_set.all()
 
     member = []
-    for participant in participants :
+    for participant in participants:
         member.append(participant.name)
     json_str = json.dumps(member, encoding='utf-8')
     return HttpResponse(json_str)

@@ -4,7 +4,7 @@
     <list default="true" id="733f9685-233d-455b-b2b7-8bb47abcd702" name="Default" comment="" />
     <ignored path="RTScreen.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/views.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375367262919" ignored="false" />
+    <file path="/views.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375368744436" ignored="false" />
     <file path="/urls.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375366925756" ignored="false" />
     <file path="/settings.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375149468841" ignored="false" />
     <file path="/main.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375192683468" ignored="false" />
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="36" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
+            <state line="20" column="21" selection-start="511" selection-end="511" vertical-scroll-proportion="0.6108291">
               <folding>
                 <element signature="e#23#70#0" expanded="true" />
               </folding>
@@ -72,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="65" selection-start="706" selection-end="706" vertical-scroll-proportion="0.642978">
+            <state line="17" column="52" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -172,8 +172,8 @@
         <option value="$PROJECT_DIR$/Main/myTemplates/canvas.html" />
         <option value="$PROJECT_DIR$/Main/myTemplates/js/canvas.js" />
         <option value="$PROJECT_DIR$/RTScreen/urls.py" />
-        <option value="$PROJECT_DIR$/Main/views.py" />
         <option value="$PROJECT_DIR$/Main/models.py" />
+        <option value="$PROJECT_DIR$/Main/views.py" />
       </list>
     </option>
   </component>
@@ -638,6 +638,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="52" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RTScreen/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="40" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
@@ -649,18 +658,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="36" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
+        <state line="20" column="21" selection-start="511" selection-end="511" vertical-scroll-proportion="0.6108291">
           <folding>
             <element signature="e#23#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="65" selection-start="706" selection-end="706" vertical-scroll-proportion="0.642978">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
