@@ -1,0 +1,64 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.webSocketAll{
+    width:1000px;
+    margin : 0 auto;
+}
+
+.chatModule{
+    width:500px;
+    height:220px;
+    float:left;
+}
+.chatList
+{
+    width:500px;
+    height:220px;
+}
+
+.chat {
+   width:960px;
+   height:120px;
+   overflow:auto;
+   background-color: #ffffff;
+   /*border:1px solid #000;*/
+
+}
+
+.chatPeopleDiv
+{
+    float:left;
+    width:110px;
+    height:210px;
+}
+
+.chatPeople
+{
+    margin-left: 20px;
+    width:80px;
+    height:200px;
+    border:1px solid #000;
+    overflow:auto;
+}
+
+.name
+{
+    width:50px;
+}
+
+.canvasModule
+{
+    width:700px;
+}
+
+.draw
+{
+    width:700px;
+    height:700px;
+}

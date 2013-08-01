@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %} Realtime Canvas {% endblock %}
+{% block nav %}
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">Contributer</a></li>
+    <li><a href="/repository">github</a></li>
+{% endblock %}
+{% block javascript %}
+    <script src="{{ STATIC_URL }}js/canvasroom.js"></script>
+{% endblock %}
+{% block css %}
+    <link href="{{ STATIC_URL }}css/canvasroom.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <hr>
+    <form class="form-horizontal" name="makeRoom" method="POST" action="/registerRoom/"> {% csrf_token %}
+        <h3 style="text-align: center;">방 만들기</h3>
+
+        <div style="margin: 0 0 0 100px;">
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">RoomName</label>
+
+                <div class="controls">
+                    <input type="text" id="name" name="name" placeholder="RoomName">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Password</label>
+
+                <div class="controls">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button class="btn btn-large btn-success" type="button" class="btn" onclick="enterRoom()">Make Room</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+        <table class="table table-bordered openedRooms">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>RoomName</th>
+                  <th>PeopleNum</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for room in rooms %}
+                <tr onclick="enterParticipant('{{room.name}}', '{{room.id}}')">
+                  <td>{{room.id}}</td>
+                  <td>{{room.name}}</td>
+                  <td>1/5</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+    <hr>
+
+    <div class="footer">
+        <p>&copy; MADCamp 2013</p>
+    </div>
+
+    <form method="POST" action="/register_participant/">{% csrf_token %}
+        <div id="participant" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="roomName">Enter Room</h3>
+            </div>
+            <div class="modal-body">
+                <p>Would you like to enter room?</p>
+                <label style="float:left; margin-top:5px;">name : </label>
+                <input style="margin-left:10px;" type="text" id="name" name="name" placeholder="name">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+                     <input type="hidden" name="id" id="roomID" class="roomID">
+                     <button class="btn btn-primary">Enter</button>
+            </div>
+        </div>
+    </form>
+
+    <div id="makeRoom" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="roomName">Make Room</h3>
+        </div>
+        <div class="modal-body">
+            <p>Would you like to make room? Please Enter Your Name</p>
+            <label style="float:left; margin-top:5px;">name : </label>
+            <input style="margin-left:10px;" type="text" id="name" name="name" placeholder="name">
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary" type="button" onClick="createRoom()">Enter</button>
+        </div>
+    </div>
+{% endblock %}

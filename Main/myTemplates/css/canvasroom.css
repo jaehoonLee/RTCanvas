@@ -1,0 +1,22 @@
+    .make{
+    }
+
+    .openedRooms{
+        background-color: #FFFFFF;
+        opacity: 0.8;
+    }
+
+    .openedRooms th:nth-child(1)
+    {
+        width:5%;
+    }
+
+    .openedRooms th:nth-child(2)
+    {
+        width:80%;
+    }
+
+    .openedRooms tr:hover{
+        background: #cccccc;
+    }
+

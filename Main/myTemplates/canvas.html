@@ -1,0 +1,91 @@
+{% extends "freebase.html" %}
+{% block title %} Realtime Canvas {% endblock %}
+{% block javascript %}
+    <script src="{{ STATIC_URL }}js/farbtastic.js"></script>
+    <script src="{{ STATIC_URL }}js/chat.js"></script>
+    <script src="{{ STATIC_URL }}js/canvas.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+            setInterval(function () {
+                refreshPage({{ partiID }}, '{{ csrf_token }}');
+            }, 1000);
+
+    </script>
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/farbtastic.css">
+{% endblock %}
+{% block content %}
+    <div class="webSocketAll">
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#myModal" data-toggle="modal">Bug Report</a></li>
+
+            </ul>
+            <h3>{{ title }}</h3>
+        </div>
+
+        <div class="canvasModule" style="width:1000px; ">
+            <div style="background-color: #dd1144; width:300px; height:700px;float:left;">
+                <div class="member"
+                     style="padding:10px; margin: 20px; width:240px; height:240px; background-color: #ffffff; overflow: auto;">
+                    <span style="color:#a47e3c; font-weight:bold;">입장한 사람들<br></span>
+                    {% for participant in participants %}
+                        {% if forloop.counter|divisibleby:"2" %}
+                            <img src="{{ STATIC_URL }}img/thumb2.jpg"
+                                 style="width:20px; height:20px;margin-right: 10px;">{{ participant.name }}<br>
+                        {% else %}
+                            <img src="{{ STATIC_URL }}img/thumb.jpg"
+                                 style="width:20px; height:20px;margin-right: 10px;">{{ participant.name }}<br>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="drawComponent" style="margin: 20px; width:260px; height:380px; background-color: #0081c2;">
+
+                    <input type="range" min="1" max="100" value="1" onchange="showValue(this.value)">
+                    <span id="range">1</span>
+                    <label id="lineWidth"></label>
+
+                    <div id="colorpicker"></div>
+                    <input type="button" name="새로고침" value="새로고침" class="clearBtn"></td>
+                </div>
+            </div>
+            <canvas id="canvas" width="700" height="700" style=""></canvas>
+        </div>
+        <div class="canvasModule" style="padding: 20px; width:960px; height: 160px; background-color: #0081c2;">
+            <div id="chat" class="chat"></div>
+            <div style="margin-top:10px;">
+                <input style="width:880px; float:left;" type="text" placeholder="내용" class="content">
+                <input class="btn btn-middle btn-success" style="margin-left:10px;" type="button" name="입력" value="입력"
+                       class="sendBtn">
+            </div>
+
+            {#            <div class="chatModule">#}
+            {#                #}
+            {#                <div>#}
+            {#                    <input type="text" placeholder="이름" class="name">#}
+            {#                    <input type="text" placeholder="내용" class="content">#}
+            {#                    <input type="button" name="입력" value="입력" class="sendBtn">#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </div>
+
+
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Bug Report</h3>
+        </div>
+        <div class="modal-body">
+            <p>If you have any problem in using program, hope to send us.</p>
+            <textarea style="width:515px;"></textarea>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Send</button>
+        </div>
+    </div>
+{% endblock %}
