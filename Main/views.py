@@ -45,10 +45,11 @@ def canvas(request):
     return render_to_response('canvas.html', RequestContext(request, {'title': '재훈의 그림방'}))
 
 
-def canvas_enter(request, room, partiID):
+def canvas_enter(request, room, participant):
     return render_to_response('canvas.html', RequestContext(request, {'title': room.name,
                                                                       'participants': room.participant_set.all(),
-                                                                      'partiID': partiID}))
+                                                                      'partiName' : participant.name,
+                                                                      'partiID': participant.id}))
 
 #model
 def register_room(request):
@@ -59,7 +60,7 @@ def register_room(request):
 def register_participant(request):
     room = CanvasRoom.objects.get(id=int(request.POST['id']))
     participant = Participant.objects.create_participant(request.POST['name'], room)
-    return canvas_enter(request, room, participant.id)
+    return canvas_enter(request, room, participant)
 
 
 def get_participant(request):

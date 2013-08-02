@@ -4,9 +4,9 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/socket.io.js"></script>
 {#    <script type="text/javascript" src="/socket.io/socket.io.js"></script>#}
     <script type="text/javascript">
-{#            setInterval(function () {#}
-{#                refreshPage({{ partiID }}, '{{ csrf_token }}');#}
-{#            }, 1000);#}
+            setInterval(function () {
+                refreshPage({{ partiID }}, '{{ csrf_token }}');
+            }, 1000);
     </script>
 {% endblock %}
 {% block css %}
@@ -56,7 +56,7 @@
         <div class="canvasModule" style="padding: 20px; width:960px; height: 160px; background-color: #0081c2;">
             <div id="chat" class="chat"></div>
             <div style="margin-top:10px;">
-                <input type="hidden" placeholder="이름" class="name" value="{{title}}">
+                <input type="hidden" placeholder="이름" class="name" value="{{ partiName }}">
                 <input style="width:880px; float:left;" type="text" placeholder="내용" class="content">
                 <input class="btn btn-middle btn-success sendBtn" style="margin-left:10px;" type="button" name="입력" value="입력">
             </div>

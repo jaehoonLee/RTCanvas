@@ -4,7 +4,7 @@
     <list default="true" id="733f9685-233d-455b-b2b7-8bb47abcd702" name="Default" comment="" />
     <ignored path="RTScreen.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/views.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375420751853" ignored="false" />
+    <file path="/views.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375424432979" ignored="false" />
     <file path="/urls.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375420799883" ignored="false" />
     <file path="/settings.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375149468841" ignored="false" />
     <file path="/main.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375192683468" ignored="false" />
@@ -40,14 +40,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="canvas.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="canvas.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/canvas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="35" selection-start="3009" selection-end="3009" vertical-scroll-proportion="-4.410714">
+            <state line="7" column="36" selection-start="300" selection-end="423" vertical-scroll-proportion="0.2472119">
               <folding>
-                <element signature="e#3083#3115#0" expanded="true" />
-                <element signature="e#3228#3253#0" expanded="true" />
-                <element signature="e#4272#4292#0" expanded="true" />
+                <marker date="1375424671071" expanded="true" signature="300:423" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -56,7 +54,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="30" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
+            <state line="50" column="80" selection-start="1568" selection-end="1577" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#23#70#0" expanded="true" />
               </folding>
@@ -64,39 +62,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socket.io.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/myTemplates/socket.io.js">
+      <file leaf-file-name="canvasroom.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/myTemplates/canvasroom.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socket.io.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/socket.io.js">
+      <file leaf-file-name="canvasroom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvasroom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/myTemplates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="5" selection-start="631" selection-end="631" vertical-scroll-proportion="35.07143">
+            <state line="15" column="21" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/__init__.py">
+      <file leaf-file-name="farbtastic.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/farbtastic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="10" column="42" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/myTemplates/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="24.0">
               <folding />
             </state>
           </provider>
@@ -113,17 +109,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="canvas.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="58" selection-start="4594" selection-end="4594" vertical-scroll-proportion="0.53710246">
+            <state line="115" column="58" selection-start="4594" selection-end="4594" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/admin.py">
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -134,7 +130,7 @@
       <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="33" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0">
+            <state line="13" column="54" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,11 +157,11 @@
         <option value="$PROJECT_DIR$/Main/myTemplates/css/style.css" />
         <option value="$PROJECT_DIR$/Main/models.py" />
         <option value="$PROJECT_DIR$/RTScreen/urls.py" />
-        <option value="$PROJECT_DIR$/Main/views.py" />
         <option value="$PROJECT_DIR$/Main/myTemplates/js/socket.io.js" />
         <option value="$PROJECT_DIR$/Main/myTemplates/js/chat.js" />
-        <option value="$PROJECT_DIR$/Main/myTemplates/canvas.html" />
         <option value="$PROJECT_DIR$/Main/myTemplates/js/canvas.js" />
+        <option value="$PROJECT_DIR$/Main/views.py" />
+        <option value="$PROJECT_DIR$/Main/myTemplates/canvas.html" />
       </list>
     </option>
   </component>
@@ -249,28 +245,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="myTemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RTScreen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RTCanvas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myTemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -535,41 +509,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python27/Lib/site-packages/django/http/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="13" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="412" selection-end="437" vertical-scroll-proportion="-4.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvasroom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RTScreen/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RTScreen/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
@@ -586,13 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/socket.io.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -602,18 +534,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/views.py">
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="30" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#70#0" expanded="true" />
-          </folding>
+        <state line="16" column="5" selection-start="631" selection-end="631" vertical-scroll-proportion="35.07143">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/socket.io.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/canvasroom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="58" selection-start="4594" selection-end="4594" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvasroom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="21" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/farbtastic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="24.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="54" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -627,35 +613,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/base.html">
+    <entry file="file://$PROJECT_DIR$/Main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="631" selection-end="631" vertical-scroll-proportion="35.07143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="33" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="50" column="80" selection-start="1568" selection-end="1577" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#23#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/canvas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="35" selection-start="3009" selection-end="3009" vertical-scroll-proportion="-4.410714">
+        <state line="7" column="36" selection-start="300" selection-end="423" vertical-scroll-proportion="0.2472119">
           <folding>
-            <element signature="e#3083#3115#0" expanded="true" />
-            <element signature="e#3228#3253#0" expanded="true" />
-            <element signature="e#4272#4292#0" expanded="true" />
+            <marker date="1375424671071" expanded="true" signature="300:423" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="58" selection-start="4594" selection-end="4594" vertical-scroll-proportion="0.53710246">
-          <folding />
         </state>
       </provider>
     </entry>
