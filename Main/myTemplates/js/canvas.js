@@ -231,7 +231,6 @@ function refreshPage(partiID, csrf_token) {
     var data = ' { \'id\' : \'' + id + '\', \'partiID\' : \'' + partiID + '\' }'    ; //, csrfmiddlewaretoken : '+ csrftoken + ' }';
 //    var data = ' { \'id\' : \'' + id + '\', \'partiID\' : \'' + partiID + '\', csrfmiddlewaretoken : \''+ csrf_token + '\' }';
 
-    console.log(data);
     $.ajax({
         type: 'POST',
         url: 'http://127.0.0.1:8000/get_participant/',
@@ -251,8 +250,6 @@ function refreshPage(partiID, csrf_token) {
                     $('.member').append("<img src=\"/static/img/thumb2.jpg\" style=\"width:20px; height:20px;margin-right: 10px;\">"
                         + member[i] + "<br>");
                 }
-
-                console.log(member[i]);
             }
         }
     }).always(function () {

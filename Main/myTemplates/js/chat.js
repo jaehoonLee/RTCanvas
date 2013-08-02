@@ -17,6 +17,9 @@ $(document).ready(function ()
             var message = data.chatArr[i].message
             $('.chat').append(name + " : " + message + '</br>')
         }
+
+        var elem = document.getElementById('chat');
+        elem.scrollTop = elem.scrollHeight;
     });
 
     socket.on('connect', function()
@@ -34,7 +37,6 @@ $(document).ready(function ()
 
         var elem = document.getElementById('chat');
         elem.scrollTop = elem.scrollHeight;
-        $('.content').val('');
     });
 
     $('.sendBtn').click(function()
@@ -60,8 +62,3 @@ $(document).ready(function ()
             $('.sendBtn').click();
     });
 });
-
-function chat()
-{
-    alert('a');
-}
