@@ -7,8 +7,8 @@
  */
 $(document).ready(function ()
 {
-    var socket = io.connect("http://127.0.0.1:3000/") ;
-//    var socket = io.connect("http://jhun88.cafe24.com:3000/") ;
+//    var socket = io.connect("http://127.0.0.1:3000/") ;
+    var socket = io.connect("http://jhun88.cafe24.com:3000/") ;
     socket.on('chatSync', function (data) {
         console.log(data);
         for (var i = 0 ; i < data.chatArr.length; i++)
@@ -56,7 +56,6 @@ $(document).ready(function ()
     });
 
     $(".content").keypress(function(e){
-        console.log('H');
         if(e.keyCode==13)
             $('.sendBtn').click();
     });

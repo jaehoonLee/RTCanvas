@@ -23,12 +23,11 @@ $(document).ready(function () {
         var background = new Image();
         background.src = "http://127.0.0.1:8000/static/img/sketchbook.jpg";
         background.onload = function () {
-            console.log("bg loaded");
             context.drawImage(background, 0, 0, 700, 700);
         };
 
-        var socket = io.connect("http://127.0.0.1:3000/");
-//        var socket = io.connect("http://jhun88.cafe24.com:3000/") ;
+//        var socket = io.connect("http://127.0.0.1:3000/");
+        var socket = io.connect("http://jhun88.cafe24.com:3000/") ;
         socket.on('connect', function () {
             console.log("connected2");
         });
@@ -44,8 +43,8 @@ $(document).ready(function () {
                         context.lineWidth = pointDatas.strokeWidth;
                         context.strokeStyle = pointDatas.strokeColor;
                         context.beginPath();
-                        context.moveTo(oldPoint.x * ratio, oldPoint.y * ratio);
-                        context.lineTo(x * ratio, y * ratio);
+                        context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
+                        context.lineTo(x * widthRatio, y * heightRatio);
                         context.stroke();
                     }
                 }
@@ -57,8 +56,8 @@ $(document).ready(function () {
                     context.lineWidth = pointDatas.strokeWidth;
                     context.strokeStyle = pointDatas.strokeColor;
                     context.beginPath();
-                    context.moveTo(oldPoint.x * ratio, oldPoint.y * ratio);
-                    context.lineTo(x * ratio, y * ratio);
+                    context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
+                    context.lineTo(x * widthRatio, y * heightRatio);
                     context.stroke();
                     oldPoint = pointDatas.points[j];
                 }
@@ -114,6 +113,7 @@ $(document).ready(function () {
 
         socket.on('clear', function (data) {
             context.clearRect(0, 0, 2000, 2000);
+            context.drawImage(background, 0, 0, 700, 700);
         });
 
 

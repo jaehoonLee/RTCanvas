@@ -12,9 +12,8 @@ def init():
     participant_thread = threading.Thread(target=update_participant)
     participant_thread.start()
 
-
 def update_participant():
-    print threading.enumerate()
+    # print threading.enumerate()
 
     rooms = CanvasRoom.objects.all()
     for room in rooms:
@@ -76,3 +75,7 @@ def get_participant(request):
         member.append(participant.name)
     json_str = json.dumps(member, encoding='utf-8')
     return HttpResponse(json_str)
+
+#Socketio
+def socketio(request):
+    return render_to_response('socket.io.js', RequestContext(request))
