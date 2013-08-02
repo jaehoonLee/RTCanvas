@@ -2,7 +2,9 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse
+from django.core import serializers
 from Main.models import *
+
 import json, time
 import threading
 
@@ -80,3 +82,11 @@ def get_participant(request):
 #Socketio
 def socketio(request):
     return render_to_response('socket.io.js', RequestContext(request))
+
+
+#Mobile
+def getRoom(request):
+    rooms = CanvasRoom.objects.all()
+    data = serializers.serialize("json", rooms, fields=('name'))
+    # json_str = json.dumps(rooms, encoding='utf-8')
+    return HttpResponse(data)

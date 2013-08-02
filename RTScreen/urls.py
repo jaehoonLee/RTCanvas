@@ -22,6 +22,8 @@ urlpatterns = patterns('',
     url(r'^register_participant/', register_participant),
     url(r'^get_participant/', get_participant),
 
+    #Mobile
+    url(r'^get_room/', getRoom),
 
     # url(r'^socket.io/socket.io.js/', RedirectView.as_view(url='/static/js/socket.io.js')),
     url(r'^socket.io/socket.io.js', socketio),
