@@ -24,13 +24,6 @@ $(document).ready(function () {
 
         var line_cap = "round"
 
-        //Draw Background Image
-        var background = new Image();
-        background.src = "http://127.0.0.1:8000/static/img/sketchbook.jpg";
-        background.onload = function () {
-            context.drawImage(background, 0, 0, canvas_width, canvas_height);
-        };
-
 //        var socket = io.connect("http://127.0.0.1:3000/");
         var socket = io.connect("http://jhun88.cafe24.com:3000/");
         socket.on('connect', function () {
@@ -38,6 +31,14 @@ $(document).ready(function () {
         });
 
         socket.on('canvasSync', function (data) {
+
+                    //Draw Background Image
+            var background = new Image();
+            background.src = "http://127.0.0.1:8000/static/img/sketchbook.jpg";
+            background.onload = function () {
+                context.drawImage(background, 0, 0, canvas_width, canvas_height);
+            };
+            
             for (var i = 0; i < data.pointArr.length; i++) {
                 var pointDatas = data.pointArr[i];
                 if (pointDatas.points.length != 0) {
