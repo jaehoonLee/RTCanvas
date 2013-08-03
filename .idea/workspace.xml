@@ -9,7 +9,7 @@
     <file path="/settings.py" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375149468841" ignored="false" />
     <file path="/main.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375192683468" ignored="false" />
     <file path="/base.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375237602167" ignored="false" />
-    <file path="/about.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375150228670" ignored="false" />
+    <file path="/about.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375529884191" ignored="false" />
     <file path="/repository.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375149753473" ignored="false" />
     <file path="/canvas.html" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375510805178" ignored="false" />
     <file path="/farbtastic.css" changelist="733f9685-233d-455b-b2b7-8bb47abcd702" time="1375173286876" ignored="false" />
@@ -43,7 +43,7 @@
             <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Main/myTemplates/css/style.css">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="51" column="1" selection-start="605" selection-end="605" vertical-scroll-proportion="0.5950267">
+                  <state line="44" column="9" selection-start="535" selection-end="535" vertical-scroll-proportion="0.3587922">
                     <folding />
                   </state>
                 </provider>
@@ -72,15 +72,6 @@
                 <element signature="e#1973#2024#0" expanded="true" />
                 <element signature="e#3567#3587#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="farbtastic.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/myTemplates/css/farbtastic.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="51" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,7 +107,20 @@
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/repository.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="12.214286">
-              <folding />
+              <folding>
+                <marker date="1375149763690" expanded="true" signature="290:715" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="318:512" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="413:498" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="430:480" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="540:705" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="602:691" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="619:673" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="756:1016" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="784:930" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="837:916" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="854:898" placeholder="..." />
+                <marker date="1375149763690" expanded="true" signature="958:1006" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,7 +129,10 @@
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="17" column="29" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1375526069367" expanded="true" signature="225:898" placeholder="..." />
+                <marker date="1375526069367" expanded="true" signature="402:517" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +141,17 @@
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/main.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
+              <folding>
+                <marker date="1375192683127" expanded="true" signature="290:476" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="525:1288" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="553:897" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="600:708" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="755:881" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="926:1277" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="971:1086" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="1136:1262" placeholder="..." />
+                <marker date="1375192683127" expanded="true" signature="1324:1370" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,11 +167,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="canvas.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="12" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.31784385">
+            <state line="40" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-6.107143">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main/myTemplates/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="14" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.046468403">
+              <folding>
+                <element signature="e#420#441#0" expanded="true" />
+                <element signature="e#485#524#0" expanded="true" />
+                <element signature="e#774#813#0" expanded="true" />
+                <element signature="e#1082#1121#0" expanded="true" />
+                <element signature="e#1509#1548#0" expanded="true" />
+                <element signature="e#1854#1893#0" expanded="true" />
+                <element signature="e#2263#2302#0" expanded="true" />
+                <element signature="e#2542#2581#0" expanded="true" />
+                <element signature="e#2827#2848#0" expanded="true" />
+                <element signature="e#2873#2894#0" expanded="true" />
+                <element signature="e#2947#2968#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Main/myTemplates/main.html" />
         <option value="$PROJECT_DIR$/Main/myTemplates/css/canvasroom.css" />
         <option value="$PROJECT_DIR$/Main/myTemplates/base.html" />
         <option value="$PROJECT_DIR$/Main/myTemplates/js/canvasroom.js" />
@@ -185,6 +222,7 @@
         <option value="$PROJECT_DIR$/Main/myTemplates/canvasroom.html" />
         <option value="$PROJECT_DIR$/Main/models.py" />
         <option value="$PROJECT_DIR$/Main/myTemplates/js/canvas.js" />
+        <option value="$PROJECT_DIR$/Main/myTemplates/about.html" />
       </list>
     </option>
   </component>
@@ -307,6 +345,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RTScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RTCanvas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myTemplates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -334,6 +394,7 @@
       <recent name="C:\Users\user\PycharmProjects\RTScreen\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\RTCanvas\Main\myTemplates\img" />
       <recent name="C:\Users\user\PycharmProjects\RTCanvas\Main\myTemplates\css" />
       <recent name="C:\Users\user\PycharmProjects\RTCanvas\Main\myTemplates\js" />
     </key>
@@ -568,15 +629,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/socket.io.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RTScreen/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="19" selection-start="714" selection-end="722" vertical-scroll-proportion="0.0">
@@ -614,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="1" selection-start="605" selection-end="605" vertical-scroll-proportion="0.5950267">
+        <state line="44" column="9" selection-start="535" selection-end="535" vertical-scroll-proportion="0.3587922">
           <folding />
         </state>
       </provider>
@@ -629,7 +681,20 @@
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/repository.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="12.214286">
-          <folding />
+          <folding>
+            <marker date="1375149763690" expanded="true" signature="290:715" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="318:512" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="413:498" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="430:480" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="540:705" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="602:691" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="619:673" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="756:1016" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="784:930" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="837:916" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="854:898" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="958:1006" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -643,7 +708,17 @@
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1375192683127" expanded="true" signature="290:476" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="525:1288" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="553:897" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="600:708" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="755:881" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="926:1277" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="971:1086" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="1136:1262" placeholder="..." />
+            <marker date="1375192683127" expanded="true" signature="1324:1370" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -671,7 +746,10 @@
     <entry file="file://$PROJECT_DIR$/Main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="29" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1375526069367" expanded="true" signature="225:898" placeholder="..." />
+            <marker date="1375526069367" expanded="true" signature="402:517" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -686,8 +764,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="12" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.31784385">
+        <state line="40" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-6.107143">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="14" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.046468403">
+          <folding>
+            <element signature="e#420#441#0" expanded="true" />
+            <element signature="e#485#524#0" expanded="true" />
+            <element signature="e#774#813#0" expanded="true" />
+            <element signature="e#1082#1121#0" expanded="true" />
+            <element signature="e#1509#1548#0" expanded="true" />
+            <element signature="e#1854#1893#0" expanded="true" />
+            <element signature="e#2263#2302#0" expanded="true" />
+            <element signature="e#2542#2581#0" expanded="true" />
+            <element signature="e#2827#2848#0" expanded="true" />
+            <element signature="e#2873#2894#0" expanded="true" />
+            <element signature="e#2947#2968#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

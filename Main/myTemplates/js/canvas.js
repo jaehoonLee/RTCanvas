@@ -38,7 +38,7 @@ $(document).ready(function () {
             background.onload = function () {
                 context.drawImage(background, 0, 0, canvas_width, canvas_height);
             };
-            
+
             for (var i = 0; i < data.pointArr.length; i++) {
                 var pointDatas = data.pointArr[i];
                 if (pointDatas.points.length != 0) {
