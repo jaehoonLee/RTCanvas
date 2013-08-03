@@ -17,28 +17,26 @@ $(document).ready(function () {
         var drawId = null;
         var authorId = null;
 
-        var widthRatio = 10/8.0;
-        var heightRatio = 10/8.0;
+        var widthRatio = 10 / 8.0;
+        var heightRatio = 10 / 8.0;
         var canvas_width = 1000;
         var canvas_height = 1000;
 
         var line_cap = "round"
 
-//        var socket = io.connect("http://127.0.0.1:3000/");
+        //Draw Background Image
+        var background = new Image();
+        background.src = "http://127.0.0.1:8000/static/img/sketchbook.jpg";
+        background.onload = function () {
+            context.drawImage(background, 0, 0, canvas_width, canvas_height);
+        };
+
         var socket = io.connect("http://jhun88.cafe24.com:3000/");
         socket.on('connect', function () {
             console.log("connected2");
         });
 
         socket.on('canvasSync', function (data) {
-
-                    //Draw Background Image
-            var background = new Image();
-            background.src = "http://127.0.0.1:8000/static/img/sketchbook.jpg";
-            background.onload = function () {
-                context.drawImage(background, 0, 0, canvas_width, canvas_height);
-            };
-
             for (var i = 0; i < data.pointArr.length; i++) {
                 var pointDatas = data.pointArr[i];
                 if (pointDatas.points.length != 0) {
@@ -95,7 +93,7 @@ $(document).ready(function () {
                     context.strokeStyle = data.strokeColor;
                     context.beginPath();
                     context.moveTo(oldPoint.x, oldPoint.y);
-                    context.lineTo(x , y);
+                    context.lineTo(x, y);
                     context.lineCap = line_cap;
                     context.stroke();
                 }
@@ -158,8 +156,8 @@ $(document).ready(function () {
                         isFill: false,
                         isErase: false,
                         points: [
-                            {x: myOldPoint.x * widthRatio , y: myOldPoint.y * heightRatio },
-                            {x: myNewPoint.x * widthRatio , y: myNewPoint.y * heightRatio }
+                            {x: myOldPoint.x * widthRatio, y: myOldPoint.y * heightRatio },
+                            {x: myNewPoint.x * widthRatio, y: myNewPoint.y * heightRatio }
                         ]
                     });
                     myOldPoint = myNewPoint
@@ -167,9 +165,9 @@ $(document).ready(function () {
 
 
             }
-        ).mouseout(function(event){
+        ).mouseout(function (event) {
                 isDown = false
-        });
+            });
 
         $('.clearBtn').click(function () {
             socket.emit('clear');
@@ -180,7 +178,6 @@ $(document).ready(function () {
         });
     }
 )
-
 
 
 function showValue(newValue) {

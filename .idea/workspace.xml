@@ -63,7 +63,7 @@
       <file leaf-file-name="canvas.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/canvas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="23" selection-start="1859" selection-end="1859" vertical-scroll-proportion="-25.107143">
+            <state line="11" column="15" selection-start="468" selection-end="468" vertical-scroll-proportion="12.0">
               <folding>
                 <element signature="e#1207#1279#0" expanded="true" />
                 <element signature="e#1338#1443#0" expanded="true" />
@@ -90,28 +90,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="repository.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/myTemplates/repository.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="12.214286">
-              <folding>
-                <marker date="1375149763690" expanded="true" signature="290:715" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="318:512" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="413:498" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="430:480" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="540:705" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="602:691" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="619:673" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="756:1016" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="784:930" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="837:916" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="854:898" placeholder="..." />
-                <marker date="1375149763690" expanded="true" signature="958:1006" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -158,10 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="canvas.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-6.107143">
+            <state line="26" column="31" selection-start="763" selection-end="763" vertical-scroll-proportion="0.31784385">
               <folding />
             </state>
           </provider>
@@ -188,8 +166,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JH2.png" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="JH2.png" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/img/JH2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JH.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/myTemplates/img/JH.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -219,8 +204,8 @@
         <option value="$PROJECT_DIR$/Main/views.py" />
         <option value="$PROJECT_DIR$/Main/myTemplates/canvasroom.html" />
         <option value="$PROJECT_DIR$/Main/models.py" />
-        <option value="$PROJECT_DIR$/Main/myTemplates/js/canvas.js" />
         <option value="$PROJECT_DIR$/Main/myTemplates/about.html" />
+        <option value="$PROJECT_DIR$/Main/myTemplates/js/canvas.js" />
       </list>
     </option>
   </component>
@@ -340,28 +325,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RTScreen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RTCanvas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myTemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,13 +590,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvasroom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="21" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/chat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="7" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.0">
@@ -673,18 +629,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="12.214286">
           <folding>
-            <marker date="1375149763690" expanded="true" signature="290:715" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="318:512" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="413:498" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="430:480" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="540:705" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="602:691" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="619:673" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="756:1016" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="784:930" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="837:916" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="854:898" placeholder="..." />
-            <marker date="1375149763690" expanded="true" signature="958:1006" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375149763690" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -709,20 +665,6 @@
             <marker date="1375192683127" expanded="true" signature="971:1086" placeholder="..." />
             <marker date="1375192683127" expanded="true" signature="1136:1262" placeholder="..." />
             <marker date="1375192683127" expanded="true" signature="1324:1370" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/canvas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="23" selection-start="1859" selection-end="1859" vertical-scroll-proportion="-25.107143">
-          <folding>
-            <element signature="e#1207#1279#0" expanded="true" />
-            <element signature="e#1338#1443#0" expanded="true" />
-            <element signature="e#1471#1511#0" expanded="true" />
-            <element signature="e#1757#1808#0" expanded="true" />
-            <element signature="e#1973#2024#0" expanded="true" />
-            <element signature="e#3567#3587#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -753,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-6.107143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="21" selection-start="2234" selection-end="2234" vertical-scroll-proportion="-0.21428572">
@@ -782,6 +717,32 @@
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/img/JH2.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/img/JH.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="15" selection-start="468" selection-end="468" vertical-scroll-proportion="12.0">
+          <folding>
+            <element signature="e#1207#1279#0" expanded="true" />
+            <element signature="e#1338#1443#0" expanded="true" />
+            <element signature="e#1471#1511#0" expanded="true" />
+            <element signature="e#1757#1808#0" expanded="true" />
+            <element signature="e#1973#2024#0" expanded="true" />
+            <element signature="e#3567#3587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="31" selection-start="763" selection-end="763" vertical-scroll-proportion="0.31784385">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
