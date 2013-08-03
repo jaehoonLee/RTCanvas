@@ -26,8 +26,8 @@
             <h3>{{ title }}</h3>
         </div>
 
-        <div class="canvasModule" style="width:1000px; ">
-            <div style="background-color: #dd1144; width:300px; height:700px;float:left;">
+        <div class="canvasModule">
+            <div style="background-color: #dd1144; width:300px; height:800px;float:left;">
                 <div class="member"
                      style="padding:10px; margin: 20px; width:240px; height:240px; background-color: #ffffff; overflow: auto;">
                     <span style="color:#a47e3c; font-weight:bold;">입장한 사람들<br></span>
@@ -41,7 +41,7 @@
                         {% endif %}
                     {% endfor %}
                 </div>
-                <div class="drawComponent" style="margin: 20px; width:260px; height:380px; background-color: #0081c2;">
+                <div class="drawComponent">
 
                     <input type="range" min="1" max="100" value="1" onchange="showValue(this.value)">
                     <span id="range">1</span>
@@ -51,24 +51,15 @@
                     <input type="button" name="새로고침" value="새로고침" class="clearBtn"></td>
                 </div>
             </div>
-            <canvas id="canvas" width="700" height="700" style=""></canvas>
+            <canvas class="draw" id="canvas" width="1000" height="1000" style=""></canvas>
         </div>
-        <div class="canvasModule" style="padding: 20px; width:960px; height: 160px; background-color: #0081c2;">
+        <div class="chatModule">
             <div id="chat" class="chat"></div>
-            <div style="margin-top:10px;">
+            <div class="chatInput">
                 <input type="hidden" placeholder="이름" class="name" value="{{ partiName }}">
-                <input style="width:880px; float:left;" type="text" placeholder="내용" class="content">
-                <input class="btn btn-middle btn-success sendBtn" style="margin-left:10px;" type="button" name="입력" value="입력">
+                <input type="text" placeholder="내용" class="content">
+                <input class="btn btn-middle btn-success sendBtn" type="button" name="입력" value="입력">
             </div>
-
-            {#            <div class="chatModule">#}
-            {#                #}
-            {#                <div>#}
-            {#                    <input type="text" placeholder="이름" class="name">#}
-            {#                    <input type="text" placeholder="내용" class="content">#}
-            {#                    <input type="button" name="입력" value="입력" class="sendBtn">#}
-            {#                </div>#}
-            {#            </div>#}
         </div>
     </div>
 

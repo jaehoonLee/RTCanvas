@@ -1,5 +1,5 @@
-var color = '#000000';
-var width = 1;
+var myColor = '#000000';
+var myWidth = 1;
 
 $(document).ready(function () {
         function Point(event, target) {
@@ -11,23 +11,28 @@ $(document).ready(function () {
         var context = canvas.getContext('2d');
         var isDown = false;
 
-        var newPoint, oldPoint;
+        var newPoint, oldPoint, myNewPoint, myOldPoint;
         var oldPointDatas = null;
         var oldPointData = null;
         var drawId = null;
         var authorId = null;
-        var widthRatio = 1;
-        var heightRatio = 1;
+
+        var widthRatio = 10/8.0;
+        var heightRatio = 10/8.0;
+        var canvas_width = 1000;
+        var canvas_height = 1000;
+
+        var line_cap = "round"
 
         //Draw Background Image
         var background = new Image();
         background.src = "http://127.0.0.1:8000/static/img/sketchbook.jpg";
         background.onload = function () {
-            context.drawImage(background, 0, 0, 700, 700);
+            context.drawImage(background, 0, 0, canvas_width, canvas_height);
         };
 
 //        var socket = io.connect("http://127.0.0.1:3000/");
-        var socket = io.connect("http://jhun88.cafe24.com:3000/") ;
+        var socket = io.connect("http://jhun88.cafe24.com:3000/");
         socket.on('connect', function () {
             console.log("connected2");
         });
@@ -45,6 +50,7 @@ $(document).ready(function () {
                         context.beginPath();
                         context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
                         context.lineTo(x * widthRatio, y * heightRatio);
+                        context.lineCap = line_cap;
                         context.stroke();
                     }
                 }
@@ -58,6 +64,7 @@ $(document).ready(function () {
                     context.beginPath();
                     context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
                     context.lineTo(x * widthRatio, y * heightRatio);
+                    context.lineCap = line_cap;
                     context.stroke();
                     oldPoint = pointDatas.points[j];
                 }
@@ -76,21 +83,19 @@ $(document).ready(function () {
         });
 
         socket.on('senddata', function (data) {
-
-
             if (data.points.length != 0 && oldPointData != null) {
 //                console.log("oldPoint:" + oldPointData.id+ ":" + data.id)  ;
-                console.log("oldPoint:" + oldPoint + ":" + oldPointData.id + ":" + data.id);
+//                console.log("oldPoint:" + oldPoint + ":" + oldPointData.id + ":" + data.id);
                 if (oldPoint != null && oldPointData.id == data.id) {
-                    console.log("oldPoint");
                     var x = data.points[0].x;
                     var y = data.points[0].y;
 
                     context.lineWidth = data.strokeWidth;
                     context.strokeStyle = data.strokeColor;
                     context.beginPath();
-                    context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
-                    context.lineTo(x * widthRatio, y * heightRatio);
+                    context.moveTo(oldPoint.x, oldPoint.y);
+                    context.lineTo(x , y);
+                    context.lineCap = line_cap;
                     context.stroke();
                 }
             }
@@ -103,8 +108,9 @@ $(document).ready(function () {
                 context.lineWidth = data.strokeWidth;
                 context.strokeStyle = data.strokeColor;
                 context.beginPath();
-                context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
-                context.lineTo(x * widthRatio, y * heightRatio);
+                context.moveTo(oldPoint.x, oldPoint.y);
+                context.lineTo(x, y);
+                context.lineCap = line_cap;
                 context.stroke();
                 oldPoint = data.points[i];
             }
@@ -112,131 +118,87 @@ $(document).ready(function () {
         });
 
         socket.on('clear', function (data) {
-            context.clearRect(0, 0, 2000, 2000);
-            context.drawImage(background, 0, 0, 700, 700);
+            context.clearRect(0, 0, canvas_width, canvas_height);
+            context.drawImage(background, 0, 0, canvas_width, canvas_height);
         });
 
 
         $('#canvas').mousedown(function (event) {
                 drawId = parseInt(Math.random() * Math.pow(10, 10));
                 authorId = parseInt(Math.random() * Math.pow(10, 10));
-                console.log(drawId);
                 isDown = true;
 
-                oldPoint = new Point(event, this);
-
-                context.lineWidth = width;
-                context.strokeStyle = color;
+                myOldPoint = new Point(event, this);
             }
         ).mouseup(function () {
-                console.log("mouseup");
                 isDown = false;
             }
         ).mousemove(function (event) {
                 if (isDown) {
+                    myNewPoint = new Point(event, this);
 
-                    newPoint = new Point(event, this);
+                    console.log('myNewPoint:' + myNewPoint.x + " " + myNewPoint.y);
                     context.beginPath();
-                    context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
-                    context.lineTo(newPoint.x * widthRatio, newPoint.y * heightRatio);
+                    context.lineWidth = myWidth;
+                    context.strokeStyle = myColor;
+                    context.moveTo(myOldPoint.x * widthRatio, myOldPoint.y * heightRatio);
+                    context.lineTo(myNewPoint.x * widthRatio, myNewPoint.y * heightRatio);
+                    context.lineCap = line_cap;
                     context.stroke();
-//                socket.emit('draw',
-//                    {
-//                       width : width,
-//                       color : color,
-//                       x1 : oldPoint.x,
-//                       y1 : oldPoint.y,
-//                       x2 : newPoint.x,
-//                       y2 : newPoint.y
-//                    });
+                    context.fill();
 
                     socket.emit('senddata', {
-                        strokeWidth: width,
-                        strokeColor: color,
-                        fillColor: color,
+                        strokeWidth: myWidth,
+                        strokeColor: myColor,
+                        fillColor: myColor,
                         authorName: 'jh',
                         authorId: '0',
                         id: drawId,
                         isFill: false,
                         isErase: false,
                         points: [
-                            {x: oldPoint.x, y: oldPoint.y},
-                            {x: newPoint.x, y: newPoint.y}
+                            {x: myOldPoint.x * widthRatio , y: myOldPoint.y * heightRatio },
+                            {x: myNewPoint.x * widthRatio , y: myNewPoint.y * heightRatio }
                         ]
                     });
-//                console.log("mouse move (" + oldPoint.x + "," + oldPoint.y + "), (" + newPoint.x + ", " + newPoint.y + ")");
-                    oldPoint = newPoint
+                    myOldPoint = myNewPoint
                 }
-            }
-        );
 
+
+            }
+        ).mouseout(function(event){
+                isDown = false
+        });
 
         $('.clearBtn').click(function () {
             socket.emit('clear');
         });
 
         $('#colorpicker').farbtastic(function (data) {
-            color = data;
-            console.log(data);
+            myColor = data;
         });
-
     }
 )
 
-$(document).ajaxSend(function(event, xhr, settings) {
-    function getCookie(name) {
-        var cookieValue = null;
-        if (document.cookie && document.cookie != '') {
-            var cookies = document.cookie.split(';');
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = jQuery.trim(cookies[i]);
-                // Does this cookie string begin with the name we want?
-                if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
-            }
-        }
-        return cookieValue;
-    }
-    function sameOrigin(url) {
-        // url could be relative or scheme relative or absolute
-        var host = document.location.host; // host + port
-        var protocol = document.location.protocol;
-        var sr_origin = '//' + host;
-        var origin = protocol + sr_origin;
-        // Allow absolute or scheme relative URLs to same origin
-        return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
-            (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
-            // or any other URL that isn't scheme relative or absolute i.e relative.
-            !(/^(\/\/|http:|https:).*/.test(url));
-    }
-    function safeMethod(method) {
-        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-    }
 
-    if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
-        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
-    }
-});
 
 function showValue(newValue) {
-    width = newValue;
+    myWidth = newValue;
     document.getElementById("range").innerHTML = newValue;
 }
 
 function refreshPage(partiID, csrf_token) {
     var id = 1;
 //    var csrftoken = getCookie('csrftoken');
-    var data = ' { \'id\' : \'' + id + '\', \'partiID\' : \'' + partiID + '\' }'    ; //, csrfmiddlewaretoken : '+ csrftoken + ' }';
+    var data = ' { \'id\' : \'' + id + '\', \'partiID\' : \'' + partiID + '\' }'; //, csrfmiddlewaretoken : '+ csrftoken + ' }';
 //    var data = ' { \'id\' : \'' + id + '\', \'partiID\' : \'' + partiID + '\', csrfmiddlewaretoken : \''+ csrf_token + '\' }';
 
     $.ajax({
         type: 'POST',
         url: 'http://127.0.0.1:8000/get_participant/',
         data: {
-            'id' : id,
-            'partiID' : partiID
+            'id': id,
+            'partiID': partiID
         },
         success: function (msg) {
             $('.member').empty();
@@ -256,18 +218,41 @@ function refreshPage(partiID, csrf_token) {
         });
 }
 
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie != '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = jQuery.trim(cookies[i]);
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
+$(document).ajaxSend(function (event, xhr, settings) {
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
             }
         }
+        return cookieValue;
     }
-    return cookieValue;
-}
+
+    function sameOrigin(url) {
+        // url could be relative or scheme relative or absolute
+        var host = document.location.host; // host + port
+        var protocol = document.location.protocol;
+        var sr_origin = '//' + host;
+        var origin = protocol + sr_origin;
+        // Allow absolute or scheme relative URLs to same origin
+        return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+            (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+            // or any other URL that isn't scheme relative or absolute i.e relative.
+            !(/^(\/\/|http:|https:).*/.test(url));
+    }
+
+    function safeMethod(method) {
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+    }
+});

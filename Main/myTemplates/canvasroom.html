@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{%  load RTSFilter %}
 {% block title %} Realtime Canvas {% endblock %}
 {% block nav %}
     <li class="active"><a href="/">Home</a></li>
@@ -53,7 +54,7 @@
                 <tr onclick="enterParticipant('{{room.name}}', '{{room.id}}')">
                   <td>{{room.id}}</td>
                   <td>{{room.name}}</td>
-                  <td>1/5</td>
+                  <td>{{memberNums|lookupfor:0 }}명 참여중!!</td>
                 </tr>
               {% endfor %}
               </tbody>

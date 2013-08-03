@@ -11,6 +11,12 @@ class CanvasRoomManager(models.Manager):
         room.save()
         return room
 
+    def delete_empty_room(self, id):
+        rooms = self.all()
+        for room in rooms:
+            if len(room) == 0:
+                room.delete()
+
     def delete_participant(self, id):
         room = self.filter(id=id)
         if len(room) == 0 :
@@ -20,6 +26,8 @@ class CanvasRoomManager(models.Manager):
         for participant in participants :
             if (now - participant.updateTime).total_seconds() > 2 :
                 participant.delete()
+
+
 
 
 class CanvasRoom(models.Model):

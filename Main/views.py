@@ -39,8 +39,14 @@ def repository(request):
 
 def canvasroom(request):
     rooms = CanvasRoom.objects.all()
+    memberNums = []
+    for room in rooms :
+        memberNums.append(len(room.participant_set.all()))
+    # memberNum = CanvasRoom.participant_set.all(
+    # print memberNum
 
-    return render_to_response('canvasroom.html', RequestContext(request, {'rooms': rooms}))
+
+    return render_to_response('canvasroom.html', RequestContext(request, {'rooms': rooms, 'memberNums' : memberNums}))
 
 
 def canvas(request):
