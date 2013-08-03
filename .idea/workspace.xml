@@ -85,15 +85,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RTSFilter.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/templatetags/RTSFilter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/templatetags/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -176,10 +167,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="14" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.046468403">
+            <state line="67" column="21" selection-start="2234" selection-end="2234" vertical-scroll-proportion="-0.21428572">
               <folding>
                 <element signature="e#420#441#0" expanded="true" />
                 <element signature="e#485#524#0" expanded="true" />
@@ -194,6 +185,13 @@
                 <element signature="e#2947#2968#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JH2.png" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main/myTemplates/img/JH2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -629,13 +627,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RTScreen/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="714" selection-end="722" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvasroom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="21" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
@@ -771,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="14" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.046468403">
+        <state line="67" column="21" selection-start="2234" selection-end="2234" vertical-scroll-proportion="-0.21428572">
           <folding>
             <element signature="e#420#441#0" expanded="true" />
             <element signature="e#485#524#0" expanded="true" />
@@ -786,6 +777,11 @@
             <element signature="e#2947#2968#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myTemplates/img/JH2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
