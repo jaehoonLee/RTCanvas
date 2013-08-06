@@ -23,6 +23,7 @@ $(document).ready(function () {
         var canvas_height = 1000;
 
         var line_cap = "round"
+        var key =1;
 
         //Draw Background Image
         var background = new Image();
@@ -32,54 +33,48 @@ $(document).ready(function () {
         };
 
         var socket = io.connect("http://jhun123.cafe24.com:3000/");
-        socket.on('connect', function () {
-            console.log("connected2");
+        socket.on('connect', function()
+        {
+            socket.emit('joinRoom', {
+                key : key});
         });
 
-        socket.on('canvasSync', function (data) {
-            for (var i = 0; i < data.pointArr.length; i++) {
-                var pointDatas = data.pointArr[i];
-                if (pointDatas.points.length != 0) {
-                    if (oldPoint != null && oldPointDatas.id == pointDatas.id) {
-                        var x = pointDatas.points[0].x;
-                        var y = pointDatas.points[0].y;
 
-                        context.lineWidth = pointDatas.strokeWidth;
-                        context.strokeStyle = pointDatas.strokeColor;
-                        context.beginPath();
-                        context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
-                        context.lineTo(x * widthRatio, y * heightRatio);
-                        context.lineCap = line_cap;
-                        context.stroke();
-                    }
-                }
-                oldPoint = pointDatas.points[0];
-                for (var j = 1; j < pointDatas.points.length; j++) {
-                    var x = pointDatas.points[j].x;
-                    var y = pointDatas.points[j].y;
-
-                    context.lineWidth = pointDatas.strokeWidth;
-                    context.strokeStyle = pointDatas.strokeColor;
-                    context.beginPath();
-                    context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
-                    context.lineTo(x * widthRatio, y * heightRatio);
-                    context.lineCap = line_cap;
-                    context.stroke();
-                    oldPoint = pointDatas.points[j];
-                }
-                oldPointDatas = pointDatas;
-            }
-
-        });
-
-        socket.on('draw', function (data) {
-            context.lineWidth = data.width;
-            context.strokeStyle = data.color;
-            context.beginPath();
-            context.moveTo(data.x1, data.y1);
-            context.lineTo(data.x2, data.y2);
-            context.stroke();
-        });
+//        socket.on('canvasSync', function (data) {
+//            for (var i = 0; i < data.pointArr.length; i++) {
+//                var pointDatas = data.pointArr[i];
+//                if (pointDatas.points.length != 0) {
+//                    if (oldPoint != null && oldPointDatas.id == pointDatas.id) {
+//                        var x = pointDatas.points[0].x;
+//                        var y = pointDatas.points[0].y;
+//
+//                        context.lineWidth = pointDatas.strokeWidth;
+//                        context.strokeStyle = pointDatas.strokeColor;
+//                        context.beginPath();
+//                        context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
+//                        context.lineTo(x * widthRatio, y * heightRatio);
+//                        context.lineCap = line_cap;
+//                        context.stroke();
+//                    }
+//                }
+//                oldPoint = pointDatas.points[0];
+//                for (var j = 1; j < pointDatas.points.length; j++) {
+//                    var x = pointDatas.points[j].x;
+//                    var y = pointDatas.points[j].y;
+//
+//                    context.lineWidth = pointDatas.strokeWidth;
+//                    context.strokeStyle = pointDatas.strokeColor;
+//                    context.beginPath();
+//                    context.moveTo(oldPoint.x * widthRatio, oldPoint.y * heightRatio);
+//                    context.lineTo(x * widthRatio, y * heightRatio);
+//                    context.lineCap = line_cap;
+//                    context.stroke();
+//                    oldPoint = pointDatas.points[j];
+//                }
+//                oldPointDatas = pointDatas;
+//            }
+//
+//        });
 
         socket.on('senddata', function (data) {
             if (data.points.length != 0 && oldPointData != null) {
@@ -147,6 +142,7 @@ $(document).ready(function () {
                     context.fill();
 
                     socket.emit('senddata', {
+                        key : key,
                         strokeWidth: myWidth,
                         strokeColor: myColor,
                         fillColor: myColor,
@@ -170,7 +166,7 @@ $(document).ready(function () {
             });
 
         $('.clearBtn').click(function () {
-            socket.emit('clear');
+            socket.emit('clear', {key: key});
         });
 
         $('#colorpicker').farbtastic(function (data) {
