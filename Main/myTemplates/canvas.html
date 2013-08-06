@@ -2,11 +2,16 @@
 {% block title %} Realtime Canvas {% endblock %}
 {% block javascript %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/socket.io.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/farbtastic.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/chat.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/canvas.js"></script>
 {#    <script type="text/javascript" src="/socket.io/socket.io.js"></script>#}
     <script type="text/javascript">
             setInterval(function () {
                 refreshPage({{ partiID }}, '{{ csrf_token }}');
             }, 1000);
+
+            setRoomKey({{ roomNum }});
     </script>
 {% endblock %}
 {% block css %}
@@ -14,9 +19,7 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/farbtastic.css">
 {% endblock %}
 {% block content %}
-    <script type="text/javascript" src="{{ STATIC_URL }}js/farbtastic.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/chat.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/canvas.js"></script>
+
     <div class="webSocketAll">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">

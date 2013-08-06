@@ -1,5 +1,6 @@
 var myColor = '#000000';
 var myWidth = 1;
+var key = -1;
 
 $(document).ready(function () {
         function Point(event, target) {
@@ -23,7 +24,7 @@ $(document).ready(function () {
         var canvas_height = 1000;
 
         var line_cap = "round"
-        var key =1;
+
 
         //Draw Background Image
         var background = new Image();
@@ -77,38 +78,23 @@ $(document).ready(function () {
 //        });
 
         socket.on('senddata', function (data) {
-            if (data.points.length != 0 && oldPointData != null) {
-//                console.log("oldPoint:" + oldPointData.id+ ":" + data.id)  ;
-//                console.log("oldPoint:" + oldPoint + ":" + oldPointData.id + ":" + data.id);
-                if (oldPoint != null && oldPointData.id == data.id) {
-                    var x = data.points[0].x;
-                    var y = data.points[0].y;
+            context.lineWidth = data.strokeWidth;
+            context.strokeStyle = data.strokeColor;
 
-                    context.lineWidth = data.strokeWidth;
-                    context.strokeStyle = data.strokeColor;
-                    context.beginPath();
-                    context.moveTo(oldPoint.x, oldPoint.y);
-                    context.lineTo(x, y);
-                    context.lineCap = line_cap;
-                    context.stroke();
-                }
-            }
+            var old_x=data.points[0].x;
+            var old_y=data.points[0].y;
 
-            oldPoint = data.points[0];
-            for (var i = 1; i < data.points.length; i++) {
-                var x = data.points[i].x;
-                var y = data.points[i].y;
+            var x = data.points[1].x;
+            var y = data.points[1].y;
 
-                context.lineWidth = data.strokeWidth;
-                context.strokeStyle = data.strokeColor;
-                context.beginPath();
-                context.moveTo(oldPoint.x, oldPoint.y);
-                context.lineTo(x, y);
-                context.lineCap = line_cap;
-                context.stroke();
-                oldPoint = data.points[i];
-            }
-            oldPointData = data;
+            context.lineWidth = data.strokeWidth;
+            context.strokeStyle = data.strokeColor;
+            context.beginPath();
+            context.moveTo(old_x, old_y );
+            context.lineTo(x, y);
+//            context.moveTo(old_x * ratio, old_y * ratio);
+//            context.lineTo(x * ratio, y * ratio);
+            context.stroke();
         });
 
         socket.on('clear', function (data) {
@@ -166,6 +152,7 @@ $(document).ready(function () {
             });
 
         $('.clearBtn').click(function () {
+            console.log(key);
             socket.emit('clear', {key: key});
         });
 
@@ -250,3 +237,8 @@ $(document).ajaxSend(function (event, xhr, settings) {
         xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
     }
 });
+
+function setRoomKey(keyParam)
+{
+    key = keyParam;
+}

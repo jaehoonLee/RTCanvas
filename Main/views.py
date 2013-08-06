@@ -57,7 +57,8 @@ def canvas_enter(request, room, participant):
     return render_to_response('canvas.html', RequestContext(request, {'title': room.name,
                                                                       'participants': room.participant_set.all(),
                                                                       'partiName' : participant.name,
-                                                                      'partiID': participant.id}))
+                                                                      'partiID': participant.id,
+                                                                      'roomNum': room.id}))
 
 #model
 def register_room(request):
