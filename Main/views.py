@@ -63,7 +63,9 @@ def canvas_enter(request, room, participant):
 #model
 def register_room(request):
     room = CanvasRoom.objects.create_room(request.POST['name'], request.POST['password'])
-    return canvas_enter(request, room, 1)
+    participant = Participant.objects.create_participant(request.POST['partiName'], room)
+    print participant.name
+    return canvas_enter(request, room, participant)
 
 
 def register_participant(request):

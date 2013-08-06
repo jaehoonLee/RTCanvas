@@ -13,7 +13,8 @@ function enterRoom()
 
 function createRoom()
 {
-    console.log("a");
+    var name = $('#partiNameOnAlert').val();
+    $('#partiName').val(name);
     document.makeRoom.submit();
 }
 
