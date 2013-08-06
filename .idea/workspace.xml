@@ -43,7 +43,7 @@
             <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Main/myTemplates/css/style.css">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="44" column="9" selection-start="535" selection-end="535" vertical-scroll-proportion="0.3587922">
+                  <state line="57" column="1" selection-start="651" selection-end="651" vertical-scroll-proportion="0.7975133">
                     <folding />
                   </state>
                 </provider>
@@ -139,7 +139,7 @@
       <file leaf-file-name="canvas.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="31" selection-start="763" selection-end="763" vertical-scroll-proportion="0.31784385">
+            <state line="29" column="41" selection-start="919" selection-end="919" vertical-scroll-proportion="0.6003717">
               <folding />
             </state>
           </provider>
@@ -508,7 +508,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -518,7 +518,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -613,7 +613,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="9" selection-start="535" selection-end="535" vertical-scroll-proportion="0.3587922">
+        <state line="57" column="1" selection-start="651" selection-end="651" vertical-scroll-proportion="0.7975133">
           <folding />
         </state>
       </provider>
@@ -740,7 +740,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/myTemplates/js/canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="31" selection-start="763" selection-end="763" vertical-scroll-proportion="0.31784385">
+        <state line="29" column="41" selection-start="919" selection-end="919" vertical-scroll-proportion="0.6003717">
           <folding />
         </state>
       </provider>
