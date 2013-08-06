@@ -31,7 +31,7 @@ $(document).ready(function () {
             context.drawImage(background, 0, 0, canvas_width, canvas_height);
         };
 
-        var socket = io.connect("http://jhun88.cafe24.com:3000/");
+        var socket = io.connect("http://jhun123.cafe24.com:3000/");
         socket.on('connect', function () {
             console.log("connected2");
         });
